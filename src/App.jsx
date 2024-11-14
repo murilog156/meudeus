@@ -19,9 +19,9 @@ export default function App() {
 
     <div>
 
-      <button onClick={() => clicou("menos")}>DIMINUI -</button>
+      <button style={{ zIndex: 10 }} onClick={() => clicou("menos")}>DIMINUI -</button>
       <h1> NUMERO ATUAL {counter}</h1>
-      <button onClick={() => clicou("mais")}> AUMENTA +</button>
+      <button style={{ zIndex: 11 }} onClick={() => clicou("mais")}> AUMENTA +</button>
       {
         counter > 5 ?
 
@@ -34,12 +34,15 @@ export default function App() {
       {estado == true ?
 
         <div>
+          <Video style={{ zIndex: -1 }} src="https://www.youtube.com/embed/kLzszU9yCK0?amp;start=50&autoplay=1&controls=0&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></Video>
+          {/* <iframe width="1031" height="703" src="https://www.youtube.com/embed/kLzszU9yCK0" title="Chaves - Leite de Burra (Parte 1 de 3)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> */}
           <Confetti
             width={1920}
             height={700}
           />
           <EstiloDaH1>PARABÉNS VOCÊ FOI O GANHADOR MAI PIKA DO MUNDO</EstiloDaH1>
           <audio autoPlay loop src="/gemidao-do-zap.mp3"></audio>
+          <audio autoPlay loop src="/lula-tira.mp3"></audio>
 
           <Corre src="https://i.pinimg.com/originals/9f/e2/d3/9fe2d3b3f4769da0b39540a0ccbd992f.gif" />
           <GiraPika src="/piroca.png" />
@@ -71,7 +74,7 @@ transform: rotateZ(360deg);
 
 }
 
-animation: giragira infinite  1000ms linear;
+animation: giragira infinite  5000ms linear;
 user-select: none;
 font-size: 100px;
 color: red;
@@ -135,6 +138,19 @@ z-index: 0;
 }
 
 animation: corremeu infinite 5s;
+
+`
+
+const Video = styled.iframe`
+
+position: fixed;
+width: 100%;
+height: 100%;
+left: 0;
+right: 0;
+bottom: 0;
+top: 0;
+
 
 `
 
