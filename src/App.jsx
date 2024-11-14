@@ -39,6 +39,7 @@ export default function App() {
             height={700}
           />
           <EstiloDaH1>PARABÉNS VOCÊ FOI O GANHADOR MAI PIKA DO MUNDO</EstiloDaH1>
+          <audio autoPlay loop src="/gemidao-do-zap.mp3"></audio>
 
           <Corre src="https://i.pinimg.com/originals/9f/e2/d3/9fe2d3b3f4769da0b39540a0ccbd992f.gif" />
           <GiraPika src="/piroca.png" />
